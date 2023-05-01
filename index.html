@@ -26,27 +26,47 @@
             <h1>Start Your Fantastic Journey Now!</h1>
             <p>Your great adventure starts from here, what are you waiting for?
                 <br />Click the button below and explore the world</p>
-            <button class="btnPrimary">Let's Go!</button>
+            <a href = "#bannerAnchorPoint">
+                <button class="btnPrimary">Let's Go!</button>
+            </a>
         </div>
         <div id = "heroImage"></div>
     </div>
     <div id = "banner">
-        <div class="card">
-            <img src="images/card1.jpg">
-            <h2>Wood Forest</h2>
-            <p>Wood forest is an area of land dominated by trees. Hundreds of definitions of forest are used throughout the world, incorporating factors such as tree density, tree height, land use, legal standing, and ecological function.</p>
+        <p id="bannerAnchorPoint"></p>
+        <h2 class="bannerTitle">Choose Your Destination</h2>
+        <div class="cardsBox">
+            <div class="card">
+                <img src="images/card1.jpg">
+                <h2>Wood Forest</h2>
+                <p>Wood forest is an area of land dominated by trees. Hundreds of definitions of forest are used throughout the world, incorporating factors such as tree density, tree height, land use, legal standing, and ecological function.</p>
+                <button class="btnPrimary" onclick="event.stopPropagation()">Details</button>
+            </div>
+            <div class="card">
+                <img src="images/card2.jpg">
+                <h2>Frozen Land</h2>
+                <p>Frozen land, the southernmost continent and site of the South Pole, is a virtually uninhabited, ice-covered landmass. Most cruises to the continent visit the Antarctic Peninsula, which stretches toward South America.</p>
+                <button class="btnPrimary" onclick="event.stopPropagation()">Details</button>
+            </div>
+            <div class="card">
+                <img src="images/card3.jpg">
+                <h2>Dragon Hill</h2>
+                <p>Dragon hill is a landform that extends above the surrounding terrain. It often has a distinct summit, and is usually applied to peaks which are above elevation compared to the relative landmass.</p>
+                <button class="btnPrimary" onclick="event.stopPropagation()">Details</button>
+            </div>
         </div>
-        <div class="card">
-            <img src="images/card2.jpg">
-            <h2>Frozen Land</h2>
-            <p>Frozen land, the southernmost continent and site of the South Pole, is a virtually uninhabited, ice-covered landmass. Most cruises to the continent visit the Antarctic Peninsula, which stretches toward South America.</p>
-        </div>
-        <div class="card">
-            <img src="images/card3.jpg">
-            <h2>Dragon Hill</h2>
-            <p>Dragon hill is a landform that extends above the surrounding terrain. It often has a distinct summit, and is usually applied to peaks which are above elevation compared to the relative landmass, though not as prominent as mountains.</p>
-        </div>
+        <button class="buttonGo">Go</button>
     </div>
+    <div class="detailBox">
+        <span class="close" onclick="closeButtonBox()">X</span>
+        <h1>Under Construction</h1>
+    </div>
+    <div class="blankSpace">
+        
+    </div>
+    <footer>
+        <span>&copy; 2023 by Ogi Baladewa - All Rights Reserved</span>
+    </footer>
 <script src="js/script.js"></script>
 </body>
 </html>

@@ -2,7 +2,7 @@ const cards = document.querySelectorAll(".card");
 const images = document.querySelectorAll(".card img");
 const buttons = document.querySelectorAll(".card button");
 const buttonGo = document.querySelector(".buttonGo");
-console.log(buttonGo);
+const toggleNav = document.querySelector("#toggleNav");
 
 for (let i = 0; i < cards.length; i++) {
     console.log(buttons[i]);
@@ -36,4 +36,22 @@ function openDetailBox() {
 function closeButtonBox() {
     const detailBox = document.querySelector(".detailBox");
     detailBox.style.display = "none";
+}
+
+
+toggleNav.addEventListener("click", clickToggleNav);
+
+function clickToggleNav() {
+    const hiddenNav = document.getElementById("hiddenNav");
+    const header = document.querySelector("header");
+    console.log(hiddenNav.style.display);
+    if (hiddenNav.style.display == "" || hiddenNav.style.display == "none") {
+        header.style.backgroundColor = "#111111";
+        header.style.color = "#ffffff";
+        hiddenNav.style.display = "block";
+    } else {   
+        header.style.backgroundColor = "white";
+        header.style.color = "black";
+        hiddenNav.style.display = "none";
+    }
 }

@@ -91,10 +91,10 @@ header button {
 
 #hero {
   display: flex;
-  align-items: center;
+  align-items: space-between;
   width: 100%;
-  height: 540px;
-  padding: 40px 8%;
+  height: 580px;
+  padding: 80px 8%;
   background-color: white;
 }
 
@@ -118,10 +118,10 @@ header button {
 
 #hero #heroImage {
   width: 55%;
-  height: 90%;
+  height: 100%;
   background: url("../images/hero-masked.png");
   background-size: contain;
-  background-position: top;
+  background-position: top right;
   background-repeat: no-repeat;
   /* border: 1px solid blue; */
 }
@@ -204,6 +204,7 @@ header button {
 .detailBox {
   position: fixed;
   display: none;
+  z-index: 2;
   width: 90%;
   height: 90%;
   top: 0;
@@ -250,6 +251,10 @@ footer {
 }
 
 @media screen and (max-width: 1336px) {
+  #hero {
+    height: 530px;
+  }
+
   #hero #heroContent {
     width: 50%;
   }
@@ -269,9 +274,17 @@ footer {
     padding: 15px 30px;
     margin-top: 20px;
   }
+
+  #banner .cardsBox {
+    justify-content: space-between;
+  }
 }
 
 @media screen and (max-width: 1220px) {
+  #hero {
+    height: 480px;
+  }
+
   #hero #heroContent {
     width: 50%;
   }
@@ -295,15 +308,35 @@ footer {
 
 @media screen and (max-width: 1110px) {
   header {
-    padding: 4px 4%;
+    padding: 4px 6%;
   }
 
   #hero {
-    padding: 40px 4%;
+    padding: 80px 6%;
+  }
+
+  #hero #heroImage {
+    height: 90%;
+  }
+
+  #banner .cardsBox {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  #banner .cardsBox .card {
+    width: 60%;
+    height: 30%;
+    margin-bottom: 60px;
   }
 }
 
 @media screen and (max-width: 1040px) {
+  header {
+    z-index: 1;
+  }
+
   header ul {
     display: none;
   }
@@ -318,23 +351,121 @@ footer {
 
   #hiddenNav {
     display: none;
+    z-index: 1;
+  }
+
+  #hero {
+    position: relative;
+    height: 560px;
+  }
+
+  #hero #heroContent {
+    width: 45%;
+  }
+
+  #hero #heroImage {
+    width: 55%;
+  }
+
+  .heroDesc {
+    position: absolute;
+    bottom: 75px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  .btnHero {
+    position: absolute;
+    left: 50%;
+    translate: -50% 0;
+    bottom: 15px;
   }
 }
 
 @media screen and (max-width: 946px) {
+  #hero #heroContent {
+    width: 40%;
+  }
+
+  #hero #heroImage {
+    width: 60%;
+  }
+
   #hero #heroContent h1 {
     line-height: 65px;
-    font-size: 60px;
+    font-size: 65px;
     font-weight: 500;
     margin-bottom: 7px;
   }
+
+  #banner .cardsBox .card {
+    width: 75%;
+    height: 30%;
+  }
 }
 
-@media screen and (max-width: 840px) {
+@media screen and (max-width: 890px) {
+  #hero {
+    height: 630px;
+    padding: 60px 6% 160px;
+    flex-direction: column;
+  }
+
+  #hero #heroContent {
+    width: 100%;
+    height: auto;
+    flex-grow: 0;
+    text-align: center;
+  }
+
+  #hero #heroImage {
+    width: 100%;
+    flex-grow: 1;
+    background-position: center;
+  }
+
+  #banner .cardsBox .card {
+    width: 85%;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  #hero {
+    height: 670px;
+    padding: 60px 8% 180px;
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .hideAbleHeroDesc {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 475px) {
+  #hero #heroContent h1 {
+    line-height: 60px;
+    font-size: 55px;
+    font-weight: 500;
+    margin-bottom: 7px;
+  }
+
+  #banner .cardsBox .card {
+    width: 95%;
+  }
+}
+
+@media screen and (max-width: 405px) {
   #hero #heroContent h1 {
     line-height: 60px;
     font-size: 50px;
     font-weight: 500;
-    margin-bottom: 5px;
+    margin-bottom: 7px;
+  }
+
+  #banner .cardsBox .card {
+    width: 100%;
   }
 }
